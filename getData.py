@@ -41,10 +41,8 @@ futures = [executor.submit(getData, t) for t in Symbols]
 count = 0
 for f in concurrent.futures.as_completed(futures):
     try:
-        #result = f.result()
-        if (1 == 2):
-            print("ran")
-        # print(res)
+        result = f.result()
+        # print(result)
     except Exception as exc:
         print('Error occured: %s' % exc)
     finally:
